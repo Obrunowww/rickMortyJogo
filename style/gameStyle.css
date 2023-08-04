@@ -1,0 +1,124 @@
+body{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    
+}
+header section{
+    width: 50%;
+    display: flex;
+    background: rgba(216, 216, 216, 0.425);
+    align-items: center;
+    height: 6vh;
+    justify-content: space-between;
+}
+
+
+
+main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabuleiro{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 10px;
+  width: 55vw;
+  margin-left: 60px;
+  max-width: 800px;
+}
+.card{
+    aspect-ratio: 3/4;
+    width: 70%;
+    border-radius: 5px;
+    background-color: rgb(51, 51, 51);
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+.posiçãoDaCarta{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #39813a;
+    border-radius: 5px;
+    transition: all 700ms ease;
+}
+.frente{
+    
+   
+   transform: rotateY(180deg);
+}
+.verso{
+    background-image: url(../images/back.png);
+    
+   
+    backface-visibility: hidden;
+}
+.revelarCarta{
+    transform: rotateY(180deg);
+}
+.cartaDesabilitada{
+    filter: saturate(4px);
+    opacity: 0.5;
+}
+.telaFimDeJogo{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    transition: all 400ms ease;
+}
+.telaFimDeJogo h2{
+    font-size: 20px;
+    text-align: center;
+}
+.telaFimDeJogo section{
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+}
+.telaFimDeJogo h1{
+    width: 80%;
+    text-shadow: 1px 1px 5px #39813a;
+}
+.telaFimDeJogo button{
+    width: 40%;
+    padding: 10px;
+    color: white;
+    background-color: #39813a;
+    border: solid 1px black;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+.telaFimDeJogo button:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px 30px #39813a;
+    color: black;
+}
+.fim {
+    display: none;
+}
